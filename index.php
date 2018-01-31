@@ -20,7 +20,22 @@
 
 
 	//carregando um usuario usando o login e senha
+	//$usuario = new Usuario();
+	//$usuario->login("root","123iug");
+	//echo $usuario;
+
+	//insert
+	//$aluno = new Usuario("aluno","teste");
+	
+	//$aluno->insert();
+
+	//echo $aluno;
+
+	//update
 	$usuario = new Usuario();
-	$usuario->login("root","123iug");
+	$usuario->loadById(5);
+	$usuario->update("felipe","judagsyjcb");
+
 	echo $usuario;
+
 ?>
