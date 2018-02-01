@@ -130,6 +130,17 @@
 			));
 		}
 
+		public function delete()
+		{
+			$sql = new Sql();
+			$sql->query("delete from tb_usuarios where idusuario = :ID",array(':ID'=>$this->getIdUsuario()));
+		
+			$this->setIdUsuario(0);
+			$this->setDeslogin("");
+			$this->setDessenha("");
+			$this->setDtcadastro(new DateTime());
+		}
+
 		public function __toString()
 		{
 			return json_encode(array(

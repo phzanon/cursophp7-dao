@@ -32,10 +32,16 @@
 	//echo $aluno;
 
 	//update
+	//$usuario = new Usuario();
+	//$usuario->loadById(5);
+	//$usuario->update("felipe","judagsyjcb");
+
+	//echo $usuario;
+
+
+	//delete
 	$usuario = new Usuario();
-	$usuario->loadById(5);
-	$usuario->update("felipe","judagsyjcb");
-
+	$usuario->loadById(4);
+	$usuario->delete();
 	echo $usuario;
-
 ?>
